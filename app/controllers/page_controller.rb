@@ -3,6 +3,8 @@ class PageController < ApplicationController
 
   def index
     log_current_user
+
+    $redis.incr("current_user_#{current_user.id}")
   end
 
   private
