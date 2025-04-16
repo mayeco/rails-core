@@ -1,6 +1,6 @@
 Recaptcha.configure do |config|
-  config.site_key = "6LfAQBErAAAAAC-tn7NmznVDejwjjnQTxHXt6qx6"
-  config.secret_key = "6LfAQBErAAAAAGKLjrXGlGCnS2W5KW-FCixSwSec"
+  config.site_key = Figaro.env.RECAPTCHA_SITE_KEY!
+  config.secret_key = Figaro.env.RECAPTCHA_SECRET_KEY!
 
   # Uncomment the following line if you are using a proxy server:
   # config.proxy = 'http://myproxy.com.au:8080'
