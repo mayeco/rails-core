@@ -179,6 +179,8 @@ GEM
       activesupport (>= 6.1)
     hashids (1.0.6)
     hashie (5.0.0)
+    hiredis-client (0.24.0)
+      redis-client (= 0.24.0)
     hotwire-livereload (2.0.0)
       actioncable (>= 7.0.0)
       listen (>= 3.0.0)
@@ -518,6 +520,7 @@ DEPENDENCIES
   faraday (~> 2.12, >= 2.12.2)
   figaro (~> 1.2)
   flash_rails_messages (~> 2.3)
+  hiredis-client (~> 0.24.0)
   hotwire-livereload (~> 2.0)
   importmap-rails
   jbuilder

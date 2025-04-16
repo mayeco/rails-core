@@ -67,6 +67,7 @@ gem "mission_control-jobs", "~> 1.0", ">= 1.0.2"
 
 # redis
 gem "redis", "~> 5.4"
+gem "hiredis-client", "~> 0.24.0"
 
 # autentication
 gem "devise", "~> 4.9", ">= 4.9.4"
