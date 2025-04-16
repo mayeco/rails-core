@@ -91,7 +91,7 @@ gem "faraday", "~> 2.12", ">= 2.12.2" # faraday
 gem "prefixed_ids", "~> 1.8", ">= 1.8.1" # prefixed ids
 gem "flash_rails_messages", "~> 2.3" # flash messages
 gem "pagy", "~> 9.3", ">= 9.3.4" # pagination
-gem "view_component", "~> 3.20" # view components
+gem "view_component", "~> 3.22" # view components
 gem "recaptcha", "~> 5.19" # recaptcha
 
 
