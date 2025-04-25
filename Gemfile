@@ -88,7 +88,7 @@ gem "amazing_print", "~> 1.7", ">= 1.7.2" # pretty print
 gem "simple_form", "~> 5.3", ">= 5.3.1" # forms
 gem "redcarpet", "~> 3.6", ">= 3.6.1" # markdown
 gem "figaro", "~> 1.2" # env variables
-gem "faraday", "~> 2.12", ">= 2.12.2" # faraday
+gem "faraday", "~> 2.13" # faraday
 gem "prefixed_ids", "~> 1.8", ">= 1.8.1" # prefixed ids
 gem "flash_rails_messages", "~> 2.3" # flash messages
 gem "pagy", "~> 9.3", ">= 9.3.4" # pagination
