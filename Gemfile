@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby file: ".ruby-version"
+
 # Use specific branch of Rails
 gem "rails", github: "rails/rails", branch: "8-0-stable"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
@@ -103,4 +105,8 @@ group :development do
   gem "pry", "~> 0.15.0" # pry
   gem "hotwire-livereload", "~> 2.0" # livereload
   gem "debugbar", "~> 0.4.3"
+end
+
+group :development, :test do
+  gem "factory_bot_rails", "~> 6.4", ">= 6.4.4"
 end
