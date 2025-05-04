@@ -2,7 +2,7 @@ default: &default
 
   daily_execute_job:
     class: DailyExecuteJob
-    schedule: every day
+    schedule: every day at midnight
 
 development:
   <<: *default
@@ -12,7 +12,7 @@ production:
 
   heroku_auto_maintenance:
     class: HerokuMaintenanceJob
-    schedule: every day
+    schedule: every day at midnight
 
 #   periodic_cleanup:
 #     class: CleanSoftDeletedRecordsJob
