@@ -1,4 +1,8 @@
-# production:
+production:
+  heroku_auto_maintenance:
+    class: HerokuMaintenanceJob
+    schedule: every day
+
 #   periodic_cleanup:
 #     class: CleanSoftDeletedRecordsJob
 #     queue: background
