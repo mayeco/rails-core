@@ -26,26 +26,19 @@ default: &default
 development:
   primary: &primary_development
     <<: *default
-    database: agentpl_development
+    database: rails_core_development
   cache:
     <<: *primary_development
-    database: agentpl_development_cache
-    migrations_paths: db/cache_migrate
   queue:
     <<: *primary_development
-    database: agentpl_development_queue
-    migrations_paths: db/queue_migrate
   cable:
     <<: *primary_development
-    database: agentpl_development_cable
-    migrations_paths: db/cable_migrate
-
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: agentpl
+  #username: rails_core
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -73,7 +66,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: agentpl_test
+  database: rails_core_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -95,21 +88,14 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
   primary: &primary_production
     <<: *default
-    database: agentpl_production
-    username: agentpl
-    password: <%= ENV["AGENTPL_DATABASE_PASSWORD"] %>
+    url: <%= ENV["DATABASE_URL"] %>
   cache:
     <<: *primary_production
-    database: agentpl_production_cache
-    migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
-    database: agentpl_production_queue
-    migrations_paths: db/queue_migrate
   cable:
     <<: *primary_production
-    database: agentpl_production_cable
-    migrations_paths: db/cable_migrate
