@@ -1,0 +1,83 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2025-05-01 18:13:48
+  end_time: 2025-05-01 18:13:48
+  brand_id: MyString
+  class_id: MyString
+  contact_person_email: MyString
+  contact_person_name: MyString
+  contact_person_phone: MyString
+  description: MyText
+  hours_estimated: 1
+  location: MyString
+  model_id: MyString
+  model_year: 1
+  name: MyString
+  osm_arrival_date: 2025-05-01 18:13:48
+  osm_arrival_time: 2025-05-01 18:13:48
+  osm_campaign: MyString
+  osm_campaign_code: MyString
+  osm_color: MyString
+  osm_engine_number: MyString
+  osm_external_ref_id: MyString
+  osm_name_arrival: MyString
+  osm_name_order: MyString
+  osm_order_date: 2025-05-01 18:13:48
+  osm_order_time: 2025-05-01 18:13:48
+  osmru_t_lcl: MyString
+  osm_reference_amount_iva: 9.99
+  osm_special_spare: MyString
+  osm_stock: MyString
+  registration_number: MyString
+  replacement_device: MyString
+  request_id: MyString
+  requested_end_date_time: 2025-05-01 18:13:48
+  requested_start_date_time: 2025-05-01 18:13:48
+  resource_group: MyString
+  resource_personal_number: MyString
+  service_region: 1
+  source_id: MyString
+  status: MyString
+  usage_qty: 9.99
+
+two:
+  start_time: 2025-05-01 18:13:48
+  end_time: 2025-05-01 18:13:48
+  brand_id: MyString
+  class_id: MyString
+  contact_person_email: MyString
+  contact_person_name: MyString
+  contact_person_phone: MyString
+  description: MyText
+  hours_estimated: 1
+  location: MyString
+  model_id: MyString
+  model_year: 1
+  name: MyString
+  osm_arrival_date: 2025-05-01 18:13:48
+  osm_arrival_time: 2025-05-01 18:13:48
+  osm_campaign: MyString
+  osm_campaign_code: MyString
+  osm_color: MyString
+  osm_engine_number: MyString
+  osm_external_ref_id: MyString
+  osm_name_arrival: MyString
+  osm_name_order: MyString
+  osm_order_date: 2025-05-01 18:13:48
+  osm_order_time: 2025-05-01 18:13:48
+  osmru_t_lcl: MyString
+  osm_reference_amount_iva: 9.99
+  osm_special_spare: MyString
+  osm_stock: MyString
+  registration_number: MyString
+  replacement_device: MyString
+  request_id: MyString
+  requested_end_date_time: 2025-05-01 18:13:48
+  requested_start_date_time: 2025-05-01 18:13:48
+  resource_group: MyString
+  resource_personal_number: MyString
+  service_region: 1
+  source_id: MyString
+  status: MyString
+  usage_qty: 9.99

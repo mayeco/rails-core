@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dataAreaId: MyString
+  groupId: MyString
+  inputWarehouseId: MyString
+  groupName: MyString
+
+two:
+  dataAreaId: MyString
+  groupId: MyString
+  inputWarehouseId: MyString
+  groupName: MyString

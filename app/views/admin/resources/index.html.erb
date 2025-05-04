@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Resources" %>
+
+<h1>Resources</h1>
+
+<div id="resources">
+  <% @resources.each do |resource| %>
+    <%= render resource %>
+    <p>
+      <%= link_to "Show this resource", [:admin, resource] %>
+    </p>
+    <hr/>
+  <% end %>
+</div>
+
+<%= link_to "New resource", new_admin_resource_path %>

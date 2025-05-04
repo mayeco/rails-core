@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-6">
+    <%= month_calendar(events: @case_request) do |date, requests| %>
+      <% next if date.saturday? || date.sunday? %>
+      <%= button_to date.day, date_availability_case_request_path(date: date), class: "btn btn-sm d-inline-flex btn-neutral",data: { turbo_frame: :date_availability } %>
+
+      <% requests.each do |request| %>
+        <div>
+          <%= request.request_id %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <%= turbo_frame_tag :date_availability do %>
+    <% end %>
+  </div>
+</div>

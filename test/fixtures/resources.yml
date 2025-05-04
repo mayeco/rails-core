@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dataAreaId: MyString
+  resourceId: MyString
+  resourceWorkerPersonnelNumber: MyString
+  resourceName: MyString
+  resourceGroup: MyString
+
+two:
+  dataAreaId: MyString
+  resourceId: MyString
+  resourceWorkerPersonnelNumber: MyString
+  resourceName: MyString
+  resourceGroup: MyString

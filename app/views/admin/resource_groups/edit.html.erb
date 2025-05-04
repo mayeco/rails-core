@@ -1,0 +1,12 @@
+<% content_for :title, "Editing resource group" %>
+
+<h1>Editing resource group</h1>
+
+<%= render "form", resource_group: @resource_group %>
+
+<br>
+
+<div>
+  <%= link_to "Show this resource group", [:admin, @resource_group] %> |
+  <%= link_to "Back to resource groups", admin_resource_groups_path %>
+</div>

@@ -1,0 +1,7 @@
+<%= turbo_frame_tag :header_links, target: :form_frame do %>
+  <%= render 'header_links', case_request: @case_request %>
+<% end %>
+
+<%= turbo_frame_tag :form_frame, data: { turbo_action: "advance" } do %>
+  <%= render "form_step_2", case_request: @case_request %>
+<% end %>

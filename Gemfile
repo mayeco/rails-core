@@ -94,7 +94,7 @@ gem "flash_rails_messages", "~> 2.3" # flash messages
 gem "pagy", "~> 9.3", ">= 9.3.4" # pagination
 gem "view_component", "~> 3.22" # view components
 gem "recaptcha", "~> 5.19" # recaptcha
-
+gem "simple_calendar", "~> 3.1" # calendar
 
 group :development do
   gem "bullet", "~> 8.0", ">= 8.0.1"
@@ -103,4 +103,9 @@ group :development do
   gem "pry", "~> 0.15.0" # pry
   gem "hotwire-livereload", "~> 2.0" # livereload
   gem "debugbar", "~> 0.4.3"
+end
+
+
+group :test, :development do
+  gem "factory_bot_rails", "~> 6.4", ">= 6.4.4"
 end

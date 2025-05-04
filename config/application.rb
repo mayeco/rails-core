@@ -6,7 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Agentpl
+module Portalfo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
@@ -17,6 +17,7 @@ module Agentpl
     config.autoload_lib(ignore: %w[assets tasks])
 
     config.i18n.default_locale = :es
+
 
     # Configuration for the application, engines, and railties goes here.
     #

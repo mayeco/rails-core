@@ -1,0 +1,13 @@
+<%= turbo_stream.update :header_links do %>
+  <%= render partial: 'header_links', locals: { case_request: @case_request }, formats: :html %>
+<% end %>
+
+<%= turbo_stream.update :date_availability do %>
+  <div class="row mt-6">
+    <% @available_slots.each do |avaliable| %>
+      <div class="col-2 mb-6">
+        <%= button_to convert_date(avaliable), finalize_case_request_path(@case_request ,date: avaliable), method: :post, class: "btn btn-primary", form: { target: :_top } %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,3 +1,20 @@
+development:
+  resource_job_sync:
+    class: SyncResourceJob
+    schedule: every hour
+
+  resource_group_job_sync:
+    class: SyncResourceGroupJob
+    schedule: every hour
+
+  case_request_job_sync:
+    class: SyncCaseRequestJob
+    schedule: every hour
+
+  sync_car_details:
+    class: SyncCarDetailsJob
+    schedule: every hour
+
 # production:
 #   periodic_cleanup:
 #     class: CleanSoftDeletedRecordsJob

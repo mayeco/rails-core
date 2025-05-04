@@ -1,0 +1,30 @@
+<div class="row text-center">
+  <div class="col-md-3">
+    <% if @case_request.step_vehicle %>
+      <%= button_to "Vehiculo", edit_case_request_path(@case_request), method: :get %>
+    <% else %>
+      Vehiculo
+    <% end %>
+  </div>
+  <div class="col-md-3">
+    <% if @case_request.step_location %>
+      <%= button_to "Sucursal", location_info_case_request_path(@case_request), method: :get %>
+    <% else %>
+      Sucursal
+    <% end %>
+  </div>
+  <div class="col-md-3">
+    <% if @case_request.step_client %>
+      <%= button_to "Cliente", client_info_case_request_path(@case_request), method: :get %>
+    <% else %>
+      Cliente
+    <% end %>
+  </div>
+  <div class="col-md-3">
+    <% if @case_request.step_calendar %>
+      <%= button_to "Horario", calendar_availability_case_request_path(@case_request), method: :get %>
+    <% else %>
+      Horario
+    <% end %>
+  </div>
+</div>

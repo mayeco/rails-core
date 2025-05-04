@@ -1,0 +1,74 @@
+<%= simple_form_for(@case_request) do |f| %>
+  <%= f.hidden_field :form_identifier, value: "case_request_form_1"%>
+
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs" data-controller="dependent-select">
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.input :brand_id,
+                    collection: @car_brands.map { |b| [b.name, b.brand_id] },
+                    include_blank: "Selecciona una marca",
+                    label_html: { class: 'form-label' },
+                    input_html: {
+                      class: 'select-brand form-control',
+                      data: {
+                        dependent_select_target: "brand",
+                        action: "change->dependent-select#brandChanged"
+                      }
+                    } %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :class_id,
+                    collection: @car_classes.map { |c| [c.name, c.class_id] },
+                    include_blank: "Selecciona una clase",
+                    label_html: { class: 'form-label' },
+                    input_html: {
+                      class: 'select-class form-control',
+                      disabled: @car_classes.empty?,
+                      data: {
+                        dependent_select_target: "class",
+                        action: "change->dependent-select#classChanged"
+                      }
+                    } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.input :model_id,
+                    collection: @car_models.map { |m| [m.name, m.model_id] },
+                    include_blank: "Selecciona un modelo",
+                    label_html: { class: 'form-label' },
+                    input_html: {
+                      class: 'select-model form-control',
+                      disabled: @car_models.empty?,
+                      data: {
+                        dependent_select_target: "model"
+                      }
+                    } %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :registration_number, 
+                    label_html: { class: 'form-label' },
+                    input_html: { class: 'form-control' } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.input :model_year, 
+                    label_html: { class: 'form-label' },
+                    input_html: { class: 'form-control' } %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :usage_qty, 
+                    label_html: { class: 'form-label' },
+                    input_html: { class: 'form-control' } %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-sm d-inline-flex btn-primary mt-4" %>
+  </div>
+<% end %>

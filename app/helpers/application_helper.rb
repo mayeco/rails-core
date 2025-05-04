@@ -11,4 +11,8 @@ module ApplicationHelper
         provider
     end
   end
+
+  def convert_date(date)
+    date.strftime("%l").strip + " " + date.strftime("%p")
+  end
 end
