@@ -8,6 +8,6 @@ class PageController < ApplicationController
   private
 
   def log_current_user
-    Debugbar.msg("current_user:", { current_user: current_user })
+    Debugbar.msg("current_user:", { current_user: current_user }) if defined?(Debugbar)
   end
 end
