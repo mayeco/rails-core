@@ -96,6 +96,7 @@ gem "flash_rails_messages", "~> 2.3" # flash messages
 gem "pagy", "~> 9.3", ">= 9.3.4" # pagination
 gem "view_component", "~> 3.22" # view components
 gem "recaptcha", "~> 5.19" # recaptcha
+gem "htmlcompressor", "~> 0.4.0" # html compressor
 
 gem "sentry-ruby"
 gem "sentry-rails"
