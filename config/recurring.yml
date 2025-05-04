@@ -1,4 +1,15 @@
+default: &default
+
+  daily_execute_job:
+    class: DailyExecuteJob
+    schedule: every day
+
+development:
+  <<: *default
+
 production:
+  <<: *default
+
   heroku_auto_maintenance:
     class: HerokuMaintenanceJob
     schedule: every day

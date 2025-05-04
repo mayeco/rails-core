@@ -97,6 +97,8 @@ gem "pagy", "~> 9.3", ">= 9.3.4" # pagination
 gem "view_component", "~> 3.22" # view components
 gem "recaptcha", "~> 5.19" # recaptcha
 
+gem "sentry-ruby"
+gem "sentry-rails"
 
 group :development do
   gem "bullet", "~> 8.0", ">= 8.0.1"
