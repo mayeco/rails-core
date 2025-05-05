@@ -30,9 +30,29 @@ class HerokuMaintenanceService
       Rails.logger.error "Failed to #{maintenance_enabled ? 'enable' : 'disable'} maintenance mode: #{response.body}"
       false
     end
+
+    if maintenance_enabled && response.success?
+      stop_dynos(dyno_type: "web")
+      stop_dynos(dyno_type: "worker")
+    end
+
   rescue Faraday::Error => e
     Rails.logger.error "Heroku API error: #{e.message}"
     false
+  end
+
+  def stop_dynos(dyno_type: "web")
+    response = connection.post do |req|
+      req.url "/apps/#{app_name}/dynos/#{dyno_type}/actions/stop"
+    end
+
+    if response.success?
+      Rails.logger.info "#{dyno_type} dynos stopped successfully for #{app_name}"
+      true
+    else
+      Rails.logger.info "#{dyno_type} dynos failed to stop for #{app_name}"
+      false
+    end
   end
 
   def connection
