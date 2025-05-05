@@ -32,8 +32,8 @@ class HerokuMaintenanceService
     end
 
     if maintenance_enabled && response.success?
-      stop_dynos(dyno_type: "web")
-      stop_dynos(dyno_type: "worker")
+      scale_dynos(dyno_type: "web")
+      scale_dynos(dyno_type: "worker")
     end
 
   rescue Faraday::Error => e
@@ -41,16 +41,17 @@ class HerokuMaintenanceService
     false
   end
 
-  def stop_dynos(dyno_type: "web")
-    response = connection.post do |req|
-      req.url "/apps/#{app_name}/dynos/#{dyno_type}/actions/stop"
+  def scale_dynos(dyno_type: "web", quantity: 0)
+    response = connection.patch do |req|
+      req.url "/apps/#{app_name}/formation/#{dyno_type}"
+      req.body = { quantity: quantity }.to_json
     end
 
     if response.success?
-      Rails.logger.info "#{dyno_type} dynos stopped successfully for #{app_name}"
+      Rails.logger.info "#{dyno_type} dynos scaled successfully for #{app_name}"
       true
     else
-      Rails.logger.info "#{dyno_type} dynos failed to stop for #{app_name}"
+      Rails.logger.info "#{dyno_type} dynos failed to scaled for #{app_name}"
       false
     end
   end
