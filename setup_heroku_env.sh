@@ -3,6 +3,8 @@
 # Script to set Heroku environment variables from application.yml
 # Usage: ./setup_heroku_env.sh [heroku_app_name]
 
+heroku labs:enable runtime-dyno-metadata
+
 if [ -z "$1" ]; then
   APP_ARGUMENT=""
 else
