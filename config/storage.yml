@@ -20,7 +20,6 @@ amazon:
   secret_access_key: <%= Figaro.env.AWS_SECRET_ACCESS_KEY! %>
   region: <%= Figaro.env.AWS_REGION! %>
   bucket: <%= Figaro.env.AWS_STORAGE_BUCKET! %>
-  prefix: <%= Rails.application.class.module_parent_name.underscore %>
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
