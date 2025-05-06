@@ -18,6 +18,8 @@ module Agentpl
 
     config.i18n.default_locale = :es
 
+    config.time_zone = 'America/Santiago'
+
     unless Rails.env.development?
       config.middleware.use HtmlCompressor::Rack
     end
