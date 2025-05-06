@@ -86,6 +86,9 @@ gem "devise-i18n", "~> 1.13" # devise localization
 
 gem "amazing_print", "~> 1.7", ">= 1.7.2" # pretty print
 
+gem "aws-sdk-s3", require: false # active storage
+gem "google-cloud-storage", "~> 1.8", require: false # active storage
+
 # misc gems
 gem "simple_form", "~> 5.3", ">= 5.3.1" # forms
 gem "redcarpet", "~> 3.6", ">= 3.6.1" # markdown
@@ -97,6 +100,7 @@ gem "pagy", "~> 9.3", ">= 9.3.4" # pagination
 gem "view_component", "~> 3.22" # view components
 gem "recaptcha", "~> 5.19" # recaptcha
 gem "htmlcompressor", "~> 0.4.0" # html compressor
+
 
 gem "sentry-ruby"
 gem "sentry-rails"
