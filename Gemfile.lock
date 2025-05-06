@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 44e016ec2290e16e4f53814c522d37dafe8119ce
+  revision: 9c7558b766cd43cd34f7b6294d023ae225c277b0
   branch: 8-0-stable
   specs:
     actioncable (8.0.2)
@@ -428,7 +428,7 @@ GEM
       base64 (>= 0.1.0)
       logger (>= 1.6.0)
       rack (>= 3.0.0, < 4)
-    rack-session (2.1.0)
+    rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
     rack-test (2.2.0)
