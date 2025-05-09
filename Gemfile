@@ -84,7 +84,7 @@ gem "omniauth-microsoft_graph", "~> 2.0", ">= 2.0.1" # microsoft
 gem "rails-i18n", "~> 8.0", ">= 8.0.1" # rails localization
 gem "devise-i18n", "~> 1.13" # devise localization
 
-gem "amazing_print", "~> 1.7", ">= 1.7.2" # pretty print
+gem "amazing_print", "~> 1.8" # pretty print
 
 gem "aws-sdk-s3", require: false # active storage
 gem "google-cloud-storage", "~> 1.8", require: false # active storage
