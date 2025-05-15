@@ -106,7 +106,7 @@ gem "sentry-ruby"
 gem "sentry-rails"
 
 group :development do
-  gem "bullet", "~> 8.0", ">= 8.0.1"
+  gem "bullet", "~> 8.0"
   gem "letter_opener_web", "~> 3.0" # letter opener web
 
   gem "pry", "~> 0.15.0" # pry
